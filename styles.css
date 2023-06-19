@@ -19,7 +19,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 70vh;
     background: linear-gradient(#a7aeb9, #a7aeb9, #a7aeb9, #134a6d);
 }
 
@@ -32,7 +32,6 @@ body::before {
     width: 1200px;
     height: 100vh;
     gap: 5px;
-    overflow: hidden;
 }
 
 .thanks-bx .word-box {
@@ -66,7 +65,7 @@ body::before {
 
 @keyframes fall {
     0% {
-        transform: translateY(-120vh);
+        transform: translateY(-220vh);
     }
     50%, 75%, 100% {
         transform: translateY(0) rotateY(0);
@@ -78,10 +77,10 @@ body::before {
 
 .thanks-bx .word-box .cord {
     position: absolute;
-    top: 0;
+    bottom:  190px;
     left: calc(50% - 6px);
     width: 10px;
-    height: calc(50vh - 95px);
+    height: 200vh;
     background-color: #faebd7;
     border-radius: 20px;
     cursor: pointer;
@@ -193,7 +192,7 @@ body::before {
 
 footer {
     position: absolute;
-    bottom: 50px;
+    bottom: 5vh;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -214,4 +213,73 @@ footer h4 {
     letter-spacing: 3px;
     color: #134a6d;
     margin-left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .thanks-bx {
+        width: 100%;
+        transform: scale(0.9);
+    }
+    footer {
+        bottom: 0vh;
+    }
+}
+
+@media (max-width: 960px) {
+    body {
+        background: linear-gradient(#a7aeb9, #a7aeb9, #134a6d, #a7aeb9);
+    }
+    body::before {
+        height: 0;
+    }
+    .thanks-bx {
+        width: 100%;
+        transform: scale(0.8);
+    }
+    footer {
+        bottom: -5vh;
+    }
+}
+
+@media (max-width: 790px) {
+    .thanks-bx {
+        width: 100%;
+        transform: scale(0.5);
+    }
+    .message h1 {
+        width: 200vw;
+        text-align: center;
+    }
+    footer {
+        bottom: -30vh;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        background: linear-gradient(#a7aeb9, #a7aeb9, #134a6d, #a7aeb9);
+    }
+    .thanks-bx {
+        width: 100%;
+        transform: scale(0.3);
+    }
+    .message h1 {
+        width: 300vw;
+        text-align: center;
+        font-size: 3.2em;
+    }
+    .message .back_to_page {
+        position: absolute;
+        bottom: -40vh;
+        padding: 10px 20px;
+        width: 550px;
+        height: 100px;
+        font-size: 3em;
+    }
+    footer {
+        bottom: -70vh;
+        width: 300vw;
+        font-size: 3em;
+    }
 }
